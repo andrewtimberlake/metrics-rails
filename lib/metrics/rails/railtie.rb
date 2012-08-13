@@ -5,12 +5,12 @@ module Metrics
       # make configuration proxy for config inside Rails
       config.metrics_rails = Metrics::Rails
       
-      initializer 'metrics_rails.setup' do
-        # don't start in test mode or in the console
-        unless ::Rails.env.test? || defined?(::Rails::Console)
-          Metrics::Rails.setup
-        end
-      end
+      #initializer 'metrics_rails.setup' do
+      #  # don't start in test mode or in the console
+      #  unless ::Rails.env.test? || defined?(::Rails::Console)
+      #    Metrics::Rails.setup
+      #  end
+      #end
       
     end
   end
